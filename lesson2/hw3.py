@@ -25,8 +25,6 @@ while True:
         except ValueError:
             print("\nYou've entered a wrong number.\nPlease try again.")
 
-    input("\nTo see the result press '='\n")
-
 # Описание условий для оператора 'symbol'
     if symbol == "+":
         result = operand_1 + operand_2
@@ -46,6 +44,14 @@ while True:
     elif symbol == "/":
         result = operand_1 / operand_2
         print(result)
+        break
+    
+    proceed = input("\nTo proceed press 'G'\n")
+    if proceed == 'G' or proceed == 'g':
+        break
+
+    count = input("\nTo see the result press '='\n")
+    if count == '=':
         break
 
 # Заглушка для того, чтоб окно терминала не сразу закрывалось
